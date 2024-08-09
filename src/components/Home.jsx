@@ -14,9 +14,9 @@ const Home = () => {
         <ListItems />
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-5'>
             {
-                !loading && data.map((item) => {
+                !loading && data.map((item,index) => {
                     {/* if(item.type!=='All') return false */}
-                    return (<Video key={item.id} video={item?.video} />)
+                    return (<Video key={index} video={item?.video} />)
                 })
             }
         </div>
